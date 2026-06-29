@@ -1,0 +1,366 @@
+{
+  "info": {
+    "_postman_id": "c0fdae3b-7d83-4b2d-bd3f-9cb65eb8c8a9",
+    "name": "Customer Support Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46866584",
+    "_collection_link": "https://go.postman.co/collection/46866584-c0fdae3b-7d83-4b2d-bd3f-9cb65eb8c8a9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "localhost:5000/api/v1/users",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "    {\r\n  \"fullName\": \"Admin1\",\r\n  \"email\": \"admin@gmail.com\",\r\n  \"password\": \"12345678\",\r\n  \"contactNumber\": \"+923051254067\",\r\n  \"role\":\"admin\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/users",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:5000/api/v1/auth/login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"saqib@example.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:5000/api/v1/tickets",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQyNWRjMGVkMzdiNTBjNWUzYzc3NjAiLCJlbWFpbCI6ImdvbGRlbkBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODI3NDgwNjEsImV4cCI6MTc4MzM1Mjg2MX0.AUQ01dEdWmSqDcD8nHzlY4L9zwLdtjfy1PT7A4yv49M",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"title\":\"Payment Issue\",\r\n    \"description\":\"I am unable to complete my payment.\",\r\n    \"priority\":\"high\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/tickets",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:5000/api/v1/tickets",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQyNWRjMGVkMzdiNTBjNWUzYzc3NjAiLCJlbWFpbCI6ImdvbGRlbkBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODI3NDgwNjEsImV4cCI6MTc4MzM1Mjg2MX0.AUQ01dEdWmSqDcD8nHzlY4L9zwLdtjfy1PT7A4yv49M",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:5000/api/v1/tickets",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "tickets"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:5000/api/v1/tickets/6a42966040048fee35119a61/assign",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQyOWM3N2EwMmJjOGUzYjI1NDQ0NTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4Mjc1MDMzNSwiZXhwIjoxNzgzMzU1MTM1fQ.nmJnkFzzR7S79eDEoNIaxiw-W1MC8ydT1-Q2zFjDA24",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"assignedAgent\":\"6a429bfba02bc8e3b2544453\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/tickets/6a42966040048fee35119a61/assign",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "tickets",
+            "6a42966040048fee35119a61",
+            "assign"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:5000/api/v1/tickets/:id/status",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQyOWM3N2EwMmJjOGUzYjI1NDQ0NTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4Mjc1MDMzNSwiZXhwIjoxNzgzMzU1MTM1fQ.nmJnkFzzR7S79eDEoNIaxiw-W1MC8ydT1-Q2zFjDA24",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"status\": \"in_progress\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/tickets/:id/status",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "tickets",
+            ":id",
+            "status"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "6a42966040048fee35119a61"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:5000/api/v1/replies/6a42966040048fee35119a61",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQyNWRjMGVkMzdiNTBjNWUzYzc3NjAiLCJlbWFpbCI6ImdvbGRlbkBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODI3NTIyOTUsImV4cCI6MTc4MzM1NzA5NX0.Zwg9faNXUGg2A2TQa0OEeureNXWdAfXkYHDwu_ztAsQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"message\": \"Plzz Jaldi resolve kare.\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:5000/api/v1/replies/6a42966040048fee35119a61",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "replies",
+            "6a42966040048fee35119a61"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:5000/api/v1/replies/6a42966040048fee35119a61",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQyNWRjMGVkMzdiNTBjNWUzYzc3NjAiLCJlbWFpbCI6ImdvbGRlbkBnbWFpbC5jb20iLCJyb2xlIjoiY3VzdG9tZXIiLCJpYXQiOjE3ODI3NTIyOTUsImV4cCI6MTc4MzM1NzA5NX0.Zwg9faNXUGg2A2TQa0OEeureNXWdAfXkYHDwu_ztAsQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:5000/api/v1/replies/6a42966040048fee35119a61",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "replies",
+            "6a42966040048fee35119a61"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:5000/api/v1/dashboard/admin",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQyOWM3N2EwMmJjOGUzYjI1NDQ0NTUiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4Mjc1Mjg0OCwiZXhwIjoxNzgzMzU3NjQ4fQ.eyVAYhYWTx830lsVNCY0DTj0mQ4U1YORiXyI0zNegz8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:5000/api/v1/dashboard/admin",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "dashboard",
+            "admin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "localhost:5000/api/v1/tickets",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTQyOWJmYmEwMmJjOGUzYjI1NDQ0NTMiLCJlbWFpbCI6InNhcWliQGV4YW1wbGUuY29tIiwicm9sZSI6ImFnZW50IiwiaWF0IjoxNzgyNzUzNzkxLCJleHAiOjE3ODMzNTg1OTF9.tBDfV25Y5d4-px942Y5dv2rvRm-YQf2E29E4mDr02L0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:5000/api/v1/tickets?status=in_progress",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "tickets"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "in_progress"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
